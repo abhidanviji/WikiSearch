@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>LimoSys Software WikiSearch Project</title>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <a href="#" onclick="window.open('infopage.html','How to Use','height=550,width=700, top=50, left=250')");><img src="images/info.png" width="50" height="50" align="right"/></a>
+      <center>
+         <h1>LimoSys Wiki Search</h1>
+         <section>
+            <input type='text' id='txt' name='txt' value='' placeholder='Search...' onclick="this.value='';" onkeyup = "wikiSearch();">
+            <button class='button' id='btn' hidden="hidden" onclick="toggleDiv('container');">Search</button>
+         </section>
+         <br><br>
+         <div class="container" id="container">
+            <section class='articles' id='articles' name='articles'></section>
+         </div>
+      </center>
+      <script src="js/article.js"></script>
+   </body>
+</html>

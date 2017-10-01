@@ -1,0 +1,77 @@
+body {
+    background-color: #add8e6;
+    font-family: courier;
+}
+input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("../images/searchicon.png");
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border-radius: 25px;
+}
+input[type=text]:focus {
+    width: 75%;
+    outline: none;
+}
+div.container {
+    width: 75%;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 25px;
+    display: none;
+}
+div.info {
+    width: 75%;
+    padding: 12px 12px 12px 12px;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 25px;
+}
+h2 {
+    padding: 12px 20px 12px 40px;
+    text-align: left;
+}
+hr {
+    overflow: visible;
+    height: 30px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.tbl {
+    border-spacing: 0;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+table {
+    border-spacing: 10px;
+    border-collapse: separate;
+    table-layout: fixed;
+}
+.imgtd {
+    padding: 10px;
+    width: 30px;
+}
+.desctd {
+    padding: 10px;
+    width: 400px;
+}
