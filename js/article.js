@@ -1,26 +1,12 @@
+//Pop-up for Read More option
 function articleInfo(content, title, lastUsed) {
     var win = window.open('', '', 'width=800,height=400,top=50,left=250,resizeable,scrollbars');
-    var doc = '<h2>' + title.replace(/`/g, "'") + '</h2>';
-    doc += '<br>';
-    doc += content.replace(/`/g, "'");
-    doc += '<br>';
-    doc += '<p><h3>Article Last Modified: ' + new Date(lastUsed) + '</h3></p>';
-    doc += '<br><br>';
-    doc += '<a href=\"http://en.wikipedia.org/wiki/' + title + '\">View Full Article</a>';
+    var doc = '<title>LimoSys Wiki Article View</title><h2>' + title.replace(/`/g, "'") + '</h2><br>' + content.replace(/`/g, "'") + '<br> \
+	<p><h3>Article Last Modified: ' + new Date(lastUsed) + '</h3></p><br><br><a href=\"http://en.wikipedia.org/wiki/' + title + '\">View Full Article</a>';
     win.document.write(doc);
-    win.document.close();
-
-    function chkTitle() {
-        if (win.document) {
-            win.document.title = "LimoSys Wiki Article View";
-        } else {
-            setTimeout(chkTitle, 10);
-        }
-    }
-	
-    chkTitle();
 }
 
+//Main function which gets called on each key stroke
 function wikiSearch() {
     var cont = document.getElementById('container');
     cont.style.display = 'block';
@@ -57,7 +43,7 @@ function wikiSearch() {
                     imgUrl = result.thumbnail.source;
                 } else {
                     imgUrl = './images/noimage.png';
-				}
+                }
                 try {
                     if (result.terms.description["0"]) {
                         desc = result.terms.description["0"];
